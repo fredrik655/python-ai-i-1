@@ -19,13 +19,6 @@ class Customer:
         """
         return self.id
 
-    def change_name(self, name):
-        """
-            Change name of the customer
-            @param name: new name
-        """
-        self.customer_name = name
-
     def get_name(self):
         """
             Get customer name
@@ -58,12 +51,6 @@ class Customer:
                 return False
         self.customer_accounts.append(ac.Account(account_id))
         return True
-
-    def add_account(self):
-        """
-            Add account without account id
-        """
-        self.customer_accounts.append(ac.Account(0))
 
     def get_account(self, account_id):
         """
@@ -157,25 +144,10 @@ class Customer:
                 return self.customer_accounts[i].withdraw(amount)
         return False
 
-    def generate_account_id(self):
-        """
-            Generate account id
-            @returns: new account id
-        """
-        new_id = 1001
-        id_found = False
-        while(not id_found):
-            id_found = True
-            for account in self.customer_accounts:
-                if(account.get_account_number() == new_id):
-                    id_found = False
-                    new_id += 1
-                    break
-        return new_id
 
 
 if __name__ == '__main__':
     print("Customer is called from cmd")
-    c1 = Customer(0, "steve", "123-123")
+    c1 = Customer(0, "steve", "123123")
     c1.add_account_with_id(1002)
     print(c1.get_account(1002).get_account_info())
