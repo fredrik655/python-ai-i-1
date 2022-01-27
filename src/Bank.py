@@ -188,18 +188,4 @@ class Bank:
 
 if __name__ == '__main__':
     print("Bank is run from cmd")
-    b = Bank()
-    b._load()
-    b.add_customer("steve2", "123456")
-    print(b.add_account("123456"))
-    print(b.deposit( "123456", 1001, 200))
-    print(b.deposit( "123456", 1001, 2330))
-    print(b.get_account("123456", 1001))
-    print(b.withdraw( "123456", 1001, 150))
-    print(b.get_account("123456", 1001))
-    print(b.withdraw( "123456", 1001, 3000))
-    print(b.get_account("123456", 1001))
-    print(b.withdraw( "123456", 1009, 3000))
-    print(b.get_account("123456", 1001))
-    print(b.close_account( "123456", 1001))
-    print(b.get_account("123456", 1001))
+    

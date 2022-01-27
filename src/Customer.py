@@ -148,6 +148,4 @@ class Customer:
 
 if __name__ == '__main__':
     print("Customer is called from cmd")
-    c1 = Customer(0, "steve", "123123")
-    c1.add_account_with_id(1002)
-    print(c1.get_account(1002).get_account_info())
+    
